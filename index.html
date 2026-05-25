@@ -228,6 +228,36 @@
     background-size: 200% 100%; animation: shimmer 3s linear infinite;
   }
 
+
+  /* ========== ClawHub 安装按钮 ========== */
+  .clawhub-btn {
+    display: inline-block; margin-top: 1rem;
+    background: linear-gradient(135deg, #4e8a6e, #6a9e7e);
+    color: #fff; font-size: .82rem; font-weight: 600;
+    padding: .45rem 1rem; border-radius: 20px;
+    text-decoration: none; transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 2px 8px rgba(78,138,110,.25);
+  }
+  .clawhub-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(78,138,110,.35); }
+
+  /* ========== ClawHub 复用卡片网格 ========== */
+  .clawhub-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  .clawhub-card {
+    display: flex; align-items: center; gap: .8rem;
+    background: #fff; border-radius: 14px; padding: 1rem 1.2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,.05); border: 1px solid #eee;
+    text-decoration: none; color: #1a1a1a;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .clawhub-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,.1); }
+  .clawhub-card-icon { font-size: 1.6rem; flex-shrink: 0; }
+  .clawhub-card-name { font-weight: 700; font-size: .92rem; }
+  .clawhub-card-slug { font-size: .74rem; color: #888; font-family: monospace; margin-top: .1rem; }
+  .clawhub-card-action { margin-left: auto; font-size: .8rem; font-weight: 700; color: #4e8a6e; flex-shrink: 0; }
+
   /* ========== Deep Dive (Timeline) ========== */
   .deep-dive { background: #fff; }
   .timeline { position: relative; padding-left: 2.5rem; }
@@ -556,6 +586,7 @@
             说一句"帮我生成大门这周的周报"，2 分钟给我一个 Redoc 链接，打开就是填好的。
           </div>
         </div>
+        <a class="clawhub-btn" href="https://clawhub.ai/skills/weekly-report-generator" target="_blank">🔗 在 ClawHub 安装</a>
       </div>
       <div class="card reveal delay-3">
         <div class="card-icon" style="background: linear-gradient(135deg, #d4f5e9, #a8e6cf);">🎯</div>
@@ -571,6 +602,7 @@
             丢给 AI，它帮我算，反复调参数、改条件也不用重头来。
           </div>
         </div>
+        <a class="clawhub-btn" href="https://clawhub.ai/skills/xushi-target-breakdown" target="_blank">🔗 在 ClawHub 安装</a>
       </div>
     </div>
 
@@ -594,6 +626,7 @@
             每周 AI 自动从 BI 拉数据、分析跑量方向，生成一个看板直接发给商家——不再靠感觉，靠数据说话。
           </div>
         </div>
+        <a class="clawhub-btn" href="https://clawhub.ai/skills/note-board-generator" target="_blank">🔗 在 ClawHub 安装</a>
       </div>
     </div>
 
@@ -602,11 +635,34 @@
       <span class="level-badge" style="background:#f0faf5;color:#2d6b4a;">🌱 第三层：可以让大家复用的 Skill — 从个人到组织</span>
       <p class="level-desc">发布在内网 ClawHub，其他 AM 装了就能直接用</p>
     </div>
-    <div class="highlight-bar reveal" style="margin-top:1rem;">
-      🧩 以上 3 个工具都是我发布在 ClawHub 上的 Skill，不只是自己用——组内同学安装之后同样可以跑
+    <div class="clawhub-grid reveal" style="margin-top:1rem;">
+      <a class="clawhub-card" href="https://clawhub.ai/skills/weekly-report-generator" target="_blank">
+        <div class="clawhub-card-icon">📅</div>
+        <div>
+          <div class="clawhub-card-name">AM 周报生成器</div>
+          <div class="clawhub-card-slug">weekly-report-generator</div>
+        </div>
+        <div class="clawhub-card-action">安装 →</div>
+      </a>
+      <a class="clawhub-card" href="https://clawhub.ai/skills/xushi-target-breakdown" target="_blank">
+        <div class="clawhub-card-icon">🎯</div>
+        <div>
+          <div class="clawhub-card-name">月度目标拆解</div>
+          <div class="clawhub-card-slug">xushi-target-breakdown</div>
+        </div>
+        <div class="clawhub-card-action">安装 →</div>
+      </a>
+      <a class="clawhub-card" href="https://clawhub.ai/skills/note-board-generator" target="_blank">
+        <div class="clawhub-card-icon">📊</div>
+        <div>
+          <div class="clawhub-card-name">内容风向看板</div>
+          <div class="clawhub-card-slug">note-board-generator</div>
+        </div>
+        <div class="clawhub-card-action">安装 →</div>
+      </a>
     </div>
 
-    <div class="highlight-bar reveal" style="margin-top:1.2rem;background:linear-gradient(90deg,#4e8a6e,#6a9e7e,#b09040);">
+    <div class="highlight-bar reveal" style="margin-top:1.5rem;background:linear-gradient(90deg,#4e8a6e,#6a9e7e,#b09040);">
       💡 AI 帮我把精力从「怎么做」移到「做什么」
     </div>
   </div>
