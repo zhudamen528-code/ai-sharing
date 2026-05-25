@@ -258,70 +258,6 @@
   .clawhub-card-slug { font-size: .74rem; color: #888; font-family: monospace; margin-top: .1rem; }
   .clawhub-card-action { margin-left: auto; font-size: .8rem; font-weight: 700; color: #4e8a6e; flex-shrink: 0; }
 
-  /* ========== Deep Dive (Timeline) ========== */
-  .deep-dive { background: #fff; }
-  .timeline { position: relative; padding-left: 2.5rem; }
-  .timeline::before {
-    content: ''; position: absolute; left: 11px; top: 0; bottom: 0;
-    width: 3px; background: linear-gradient(180deg, #b06070, #b09040, #4e8a6e, #6a4c93);
-    border-radius: 3px;
-  }
-  .tl-item { position: relative; margin-bottom: 2.5rem; }
-  .tl-item:last-child { margin-bottom: 0; }
-  .tl-dot {
-    position: absolute; left: -2.5rem; top: .2rem;
-    width: 24px; height: 24px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: .7rem; color: #fff; font-weight: 700; z-index: 1;
-  }
-  .tl-dot.d1 { background: #b06070; }
-  .tl-dot.d2 { background: #b87d5c; }
-  .tl-dot.d3 { background: #b09040; color: #fff; }
-  .tl-dot.d4 { background: #4e8a6e; color: #fff; }
-  .tl-dot.d5 { background: #6a4c93; }
-  .tl-dot.d6 { background: #4a90d9; }
-
-  .tl-title { font-size: 1.2rem; font-weight: 700; margin-bottom: .5rem; }
-  .tl-body { font-size: .95rem; color: #444; line-height: 1.8; }
-  .tl-body ul { padding-left: 1.2rem; }
-  .tl-body li { margin-bottom: .4rem; }
-
-  /* step cards */
-  .steps-grid { display: grid; gap: 1rem; margin-top: 1rem; }
-  .step-card {
-    background: #f5f2ef; border-radius: 14px; padding: 1.2rem 1.4rem;
-    display: flex; gap: 1rem; align-items: flex-start;
-    border: 1px solid #f0ece8;
-  }
-  .step-num {
-    width: 36px; height: 36px; border-radius: 10px;
-    background: linear-gradient(135deg, #c9768a, #d4956e);
-    color: #fff; display: flex; align-items: center; justify-content: center;
-    font-weight: 800; font-size: .9rem; flex-shrink: 0;
-  }
-  .step-card h4 { font-size: .95rem; font-weight: 700; margin-bottom: .2rem; }
-  .step-card p { font-size: .85rem; color: #777; }
-
-  /* key insight */
-  .key-insight {
-    background: linear-gradient(135deg, #6a4c93, #8b6aae);
-    border-radius: 20px; padding: 2rem; color: #fff;
-    text-align: center; position: relative; overflow: hidden;
-    margin-top: 1rem;
-  }
-  .key-insight::before {
-    content: '💡'; position: absolute; top: -10px; right: 20px;
-    font-size: 4rem; opacity: .15;
-  }
-  .key-insight p {
-    font-size: clamp(1rem, 2.5vw, 1.2rem); font-weight: 600;
-    line-height: 1.7; position: relative; z-index: 1;
-  }
-  .key-insight .insight-label {
-    font-size: .75rem; letter-spacing: 2px; text-transform: uppercase;
-    opacity: .7; margin-bottom: .8rem;
-  }
-
   /* ========== Tips ========== */
   .tips { background: linear-gradient(180deg, #f5f0ec 0%, #f0ece8 100%); }
   .tips-grid {
@@ -464,7 +400,6 @@
   <div class="nav-dot active" data-target="hero"><span class="tooltip">封面</span></div>
   <div class="nav-dot" data-target="about"><span class="tooltip">关于我</span></div>
   <div class="nav-dot" data-target="what-idid"><span class="tooltip">Part 1</span></div>
-  <div class="nav-dot" data-target="deep-dive"><span class="tooltip">Part 2</span></div>
   <div class="nav-dot" data-target="tips"><span class="tooltip">Tips</span></div>
   <div class="nav-dot" data-target="footer"><span class="tooltip">结尾</span></div>
 </nav>
@@ -562,78 +497,115 @@
 <!-- ==================== WHAT I DID (Part 1) ==================== -->
 <section class="what-idid" id="what-idid">
   <div class="container">
-    <div class="section-tag tag-yellow reveal">💼 Part 1 <span class="part-badge p1">5min</span></div>
-    <h2 class="section-title reveal delay-1">我用 AI 做了哪些事？</h2>
-    <p class="section-desc reveal delay-2">从省时间到创造价值，AI 能做的事情分三个层次 👇</p>
+    <div class="section-tag tag-yellow reveal">💼 我用 AI 做了哪些事</div>
+    <h2 class="section-title reveal delay-1">从省时间，到创造价值</h2>
+    <p class="section-desc reveal delay-2">AM 用 AI 能做的事，大概分三个层次 👇</p>
 
-    <!-- 层次一 -->
+    <!-- ===== 层次一：简单机械性工作 ===== -->
     <div class="level-label reveal" style="margin-top:2.5rem;">
       <span class="level-badge" style="background:#e8f0fb;color:#3a6bc7;">⚡ 第一层：简单机械性工作 — 省时间</span>
       <p class="level-desc">那些让你烦的体力活，是 AI 最该上场的地方</p>
     </div>
     <div class="cards-grid" style="margin-top:1rem;">
+
       <div class="card reveal delay-2">
-        <div class="card-icon" style="background: linear-gradient(135deg, #fff3d0, #ffe5a0);">📅</div>
+        <div class="card-icon" style="background:linear-gradient(135deg,#fff3d0,#ffe5a0);">📅</div>
         <h3>AM 周报生成器</h3>
         <div class="card-tool">weekly-report-generator</div>
         <div class="card-row">
           <div class="card-row-item problem">
             <span class="label label-problem">痛点 😩</span><br>
-            写周报要拉 8 个数据源、算环比、套模板，稍不注意数字就贴错，纯体力活，一搞就半小时。
+            写周报要拉 8 个数据源、算环比、套模板，稍不注意数字就贴错，一搞就半小时，纯体力活。
+          </div>
+          <div class="card-row-item solution">
+            <span class="label label-solution">洞察 💡</span><br>
+            周报的结构是固定的，数据来源是固定的，套模板这件事 AI 完全可以替代。
           </div>
           <div class="card-row-item solution">
             <span class="label label-solution">现在 ✨</span><br>
-            说一句"帮我生成大门这周的周报"，2 分钟给我一个 Redoc 链接，打开就是填好的。
+            说一句"帮我生成大门这周的周报"，2 分钟给我一个 Redoc 链接，打开就是填好的。数据更准确，诊断商家也更有依据。
           </div>
         </div>
-        <a class="clawhub-btn" href="https://clawhub.ai/skills/weekly-report-generator" target="_blank">🔗 在 ClawHub 安装</a>
+        <a class="clawhub-btn" href="https://clawhub.ai/skills/weekly-report-generator" target="_blank">🔗 在 ClawHub 安装使用</a>
       </div>
+
       <div class="card reveal delay-3">
-        <div class="card-icon" style="background: linear-gradient(135deg, #d4f5e9, #a8e6cf);">🎯</div>
+        <div class="card-icon" style="background:linear-gradient(135deg,#d4f5e9,#a8e6cf);">🎯</div>
         <h3>月度目标拆解</h3>
         <div class="card-tool">xushi-target-breakdown</div>
         <div class="card-row">
           <div class="card-row-item problem">
             <span class="label label-problem">痛点 😩</span><br>
-            月初把总 GMV 拆到 K 播/店播/商笔/商卡，还要对上每个 AM 的锁定值，手算容易出错，改一个数全要重算。
+            月初把总 GMV 目标拆到 K 播/店播/商笔/商卡，还要对上每个 AM 的锁定值，手算容易出错，改一个条件全要重算。
+          </div>
+          <div class="card-row-item solution">
+            <span class="label label-solution">洞察 💡</span><br>
+            这是一道有规则的计算题，规则写清楚了，AI 比人算得更快更准，改参数也是秒出结果。
           </div>
           <div class="card-row-item solution">
             <span class="label label-solution">现在 ✨</span><br>
-            丢给 AI，它帮我算，反复调参数、改条件也不用重头来。
+            把条件和锁定值丢给 AI，它帮我算，反复调参数也不用重头来。月初跟商家对目标，数据更扎实。
           </div>
         </div>
-        <a class="clawhub-btn" href="https://clawhub.ai/skills/xushi-target-breakdown" target="_blank">🔗 在 ClawHub 安装</a>
+        <a class="clawhub-btn" href="https://clawhub.ai/skills/xushi-target-breakdown" target="_blank">🔗 在 ClawHub 安装使用</a>
       </div>
+
     </div>
 
-    <!-- 层次二 -->
+    <!-- ===== 层次二：能创造价值的工作 ===== -->
     <div class="level-label reveal" style="margin-top:3rem;">
       <span class="level-badge" style="background:#fdf0f5;color:#b5384d;">🚀 第二层：能创造价值的工作 — 让你说话有底气</span>
-      <p class="level-desc">不只是省时间，而是做出了以前做不到的事</p>
+      <p class="level-desc">不只省时间，而是做出了以前做不到的事，信息差变成竞争力</p>
     </div>
     <div class="cards-grid" style="margin-top:1rem;">
-      <div class="card reveal delay-2" style="border-top: 3px solid #b5384d;">
-        <div class="card-icon" style="background: linear-gradient(135deg, #e0f0ff, #b8d8f8);">📊</div>
-        <h3>内容风向看板</h3>
-        <div class="card-tool">note-board-generator</div>
+
+      <div class="card reveal delay-2" style="border-top:3px solid #b5384d;">
+        <div class="card-icon" style="background:linear-gradient(135deg,#e0f0ff,#b8d8f8);">📊</div>
+        <h3>休食行业内容风向看板</h3>
+        <div class="card-tool">note-board-generator · <a href="https://zhudamen528-code.github.io/xushi-trends/" target="_blank" style="color:#4e8a6e;font-weight:600;">查看线上看板 →</a></div>
         <div class="card-row">
           <div class="card-row-item problem">
             <span class="label label-problem">痛点 😩</span><br>
-            商家问"现在什么方向好"，以前靠感觉拍脑袋，说不清也没依据。
+            商家问"现在什么内容方向好"，以前靠感觉答，说不清也没依据，说了商家也不信。
+          </div>
+          <div class="card-row-item solution">
+            <span class="label label-solution">洞察 💡</span><br>
+            BI 里有数据，问题是从原始数据到"这周做X方向"之间，差了一层分析和呈现。这层可以让 AI 来做。
           </div>
           <div class="card-row-item solution">
             <span class="label label-solution">现在 ✨</span><br>
-            每周 AI 自动从 BI 拉数据、分析跑量方向，生成一个看板直接发给商家——不再靠感觉，靠数据说话。
+            每周 AI 自动拉 BI 数据 → 分析哪些内容方向在跑量 → 生成网页看板 → 直接发给商家。商家看到的是结论，不是原始数据。
           </div>
         </div>
-        <a class="clawhub-btn" href="https://clawhub.ai/skills/note-board-generator" target="_blank">🔗 在 ClawHub 安装</a>
+        <a class="clawhub-btn" href="https://clawhub.ai/skills/note-board-generator" target="_blank">🔗 在 ClawHub 安装使用</a>
       </div>
+
+      <div class="card reveal delay-3" style="border-top:3px solid #4a90d9;">
+        <div class="card-icon" style="background:linear-gradient(135deg,#e8f0fb,#c5d9f5);">🗓️</div>
+        <h3>大场规划助手</h3>
+        <div class="card-tool"><a href="https://zhudamen528-code.github.io/dachang-planner/" target="_blank" style="color:#4e8a6e;font-weight:600;">查看线上看板 →</a></div>
+        <div class="card-row">
+          <div class="card-row-item problem">
+            <span class="label label-problem">痛点 😩</span><br>
+            商家筹备大场，时间线、预热节奏、各环节 SOP 全靠 AM 口头指导，说了商家记不住，也没地方查。
+          </div>
+          <div class="card-row-item solution">
+            <span class="label label-solution">洞察 💡</span><br>
+            大场 SOP 是有规律的（T-30 到开播），把这套规律沉淀成工具，商家自己就能查、自己能规划。
+          </div>
+          <div class="card-row-item solution">
+            <span class="label label-solution">现在 ✨</span><br>
+            做了一个可交互的大场规划网页，商家输入大场日期，自动生成倒计时节点和每阶段动作清单。AM 不用重复讲，商家自己能用。
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- 层次三 -->
+    <!-- ===== 层次三：可复用的 Skill ===== -->
     <div class="level-label reveal" style="margin-top:3rem;">
-      <span class="level-badge" style="background:#f0faf5;color:#2d6b4a;">🌱 第三层：可以让大家复用的 Skill — 从个人到组织</span>
-      <p class="level-desc">发布在内网 ClawHub，其他 AM 装了就能直接用</p>
+      <span class="level-badge" style="background:#f0faf5;color:#2d6b4a;">🌱 第三层：可以让大家复用 — 从个人到组织</span>
+      <p class="level-desc">这些工具发布在内网 ClawHub，安装即用，不用自己搭</p>
     </div>
     <div class="clawhub-grid reveal" style="margin-top:1rem;">
       <a class="clawhub-card" href="https://clawhub.ai/skills/weekly-report-generator" target="_blank">
@@ -668,97 +640,46 @@
   </div>
 </section>
 
-<!-- ==================== DEEP DIVE (Part 2) ==================== -->
-<section class="deep-dive" id="deep-dive">
-  <div class="container">
-    <div class="section-tag tag-green reveal">🔍 Part 2 <span class="part-badge p2">10min</span></div>
-    <h2 class="section-title reveal delay-1">最值得分享的 Skill</h2>
-    <p class="section-desc reveal delay-2">休食行业风向看板 — 从 0 到 1 的全过程 🛠️</p>
-
-    <div class="timeline">
-      <!-- 2.1 -->
-      <div class="tl-item reveal">
-        <div class="tl-dot d1">💭</div>
-        <div class="tl-title">2.1 源起 — 一个很简单的念头</div>
-        <div class="tl-body">
-          <ul>
-            <li>商家问"现在什么内容方向好"，每次都靠经验拍脑袋，没有依据 🤷</li>
-            <li>同事（文玩方向）有自己的行业风向看板，休食没有</li>
-            <li>想法：做一个<strong>开源网页</strong>，让所有休食商家都能看，信息差变透明 🌟</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 2.2 -->
-      <div class="tl-item reveal">
-        <div class="tl-dot d2">🎉</div>
-        <div class="tl-title">2.2 成果 — 看板长这样</div>
-        <div class="tl-body">
-          <p>一个按钮，直接跳转 👉 <a href="https://zhudamen528-code.github.io/xushi-trends/" target="_blank" rel="noopener" style="color:#ff6b8a;font-weight:600;text-decoration:underline;">zhudamen528-code.github.io/xushi-trends</a></p>
-          <p style="margin-top:.8rem;">看板包含 <strong>6 大模块</strong>：</p>
-          <ul>
-            <li>📈 行业基准数据</li>
-            <li>🧭 内容风向</li>
-            <li>🖼️ 高 CTR 封面</li>
-            <li>✍️ 标题公式</li>
-            <li>🔥 热点话题</li>
-            <li>📦 品类风向</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 2.3 -->
-      <div class="tl-item reveal">
-        <div class="tl-dot d3">🛠️</div>
-        <div class="tl-title">2.3 是怎么搭出来的？</div>
-        <div class="tl-body">
-          <div class="steps-grid">
-            <div class="step-card">
-              <div class="step-num">1</div>
-              <div>
-                <h4>🔎 找对标</h4>
-                <p>发现同事有文玩版看板，拿来参考风格。有参照物比从零开始快得多。</p>
-              </div>
-            </div>
-            <div class="step-card">
-              <div class="step-num">2</div>
-              <div>
-                <h4>📝 描述需求</h4>
-                <p>把我想要的结构、数据来源、更新逻辑告诉 AI。说清楚比说漂亮重要。</p>
-              </div>
-            </div>
-            <div class="step-card">
-              <div class="step-num">3</div>
-              <div>
-                <h4>🚀 迭代上线</h4>
-                <p>AI 生成 HTML，托管到 GitHub Pages，0 成本永久可访问。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2.4 -->
-      <div class="tl-item reveal">
-        <div class="tl-dot d4">💡</div>
-        <div class="tl-title">2.4 关键认知</div>
-        <div class="key-insight">
-          <div class="insight-label">⚡ 最重要的一句话</div>
-          <p>你不是在"用 AI 写代码"<br>你是在把自己的<strong>业务判断</strong>翻译给 AI 执行</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ==================== TIPS ==================== -->
 <section class="tips" id="tips">
   <div class="container">
     <div class="section-tag tag-purple reveal">🎁 带走这些</div>
-    <h2 class="section-title reveal delay-1">5 条 AI 使用 Tips</h2>
-    <p class="section-desc reveal delay-2">都是踩坑之后总结出来的 🧠</p>
+    <h2 class="section-title reveal delay-1">怎么用好 AI？</h2>
+    <p class="section-desc reveal delay-2">两件事：喂对东西 + 问对问题 🧠</p>
 
-    <div class="tips-grid">
+    <!-- 喂了哪些东西 -->
+    <div class="level-label reveal" style="margin-top:0;">
+      <span class="level-badge" style="background:#ede7f6;color:#6a4c93;">🧠 我喂给 AI 的东西</span>
+      <p class="level-desc">AI 能干活，是因为它理解你的业务。这些是我喂给它的"底层认知"：</p>
+    </div>
+    <div class="cards-grid" style="margin-top:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+      <div class="card reveal delay-1" style="padding:1.4rem;">
+        <div style="font-size:1.4rem;margin-bottom:.5rem;">🌀</div>
+        <h4 style="font-size:.95rem;font-weight:700;margin-bottom:.4rem;">NPL 方法论</h4>
+        <p style="font-size:.85rem;color:#555;line-height:1.6;">笔记×私域×直播，三场域互相喂养的飞轮逻辑。喂给 AI 之后，它诊断商家问题时会自动按这个框架拆。</p>
+      </div>
+      <div class="card reveal delay-2" style="padding:1.4rem;">
+        <div style="font-size:1.4rem;margin-bottom:.5rem;">🎪</div>
+        <h4 style="font-size:.95rem;font-weight:700;margin-bottom:.4rem;">大场操盘 SOP</h4>
+        <p style="font-size:.85rem;color:#555;line-height:1.6;">T-30 到开播的标准动作节奏，预算测算公式，各类型商家的差异化打法。AI 知道之后，大场规划就能直接出方案。</p>
+      </div>
+      <div class="card reveal delay-3" style="padding:1.4rem;">
+        <div style="font-size:1.4rem;margin-bottom:.5rem;">📝</div>
+        <h4 style="font-size:.95rem;font-weight:700;margin-bottom:.4rem;">商品笔记运营框架</h4>
+        <p style="font-size:.85rem;color:#555;line-height:1.6;">封面/标题/正文/商品匹配度，CTR 诊断逻辑，选题来源。AI 拿到这些，才能真的帮你看笔记问题出在哪。</p>
+      </div>
+      <div class="card reveal delay-4" style="padding:1.4rem;">
+        <div style="font-size:1.4rem;margin-bottom:.5rem;">📊</div>
+        <h4 style="font-size:.95rem;font-weight:700;margin-bottom:.4rem;">周会文档分析框架</h4>
+        <p style="font-size:.85rem;color:#555;line-height:1.6;">场域层 → 商家层 → 归因层的三层拆解，同比/环比/个人vs大盘的解读锚点。喂完之后看数据，AI 会给有意义的结论而不是复述数字。</p>
+      </div>
+    </div>
+
+    <div class="level-label reveal" style="margin-top:2.5rem;">
+      <span class="level-badge" style="background:#fff3d0;color:#8a6a00;">✍️ 5 条问对问题的 Tips</span>
+      <p class="level-desc">光有好工具不够，问法对了才能把 AI 用到位</p>
+    </div>
+    <div class="tips-grid" style="margin-top:1rem;">
       <div class="tip-card reveal delay-1">
         <div class="tip-num">1</div>
         <h4>给背景，不给空问题</h4>
@@ -822,7 +743,7 @@ const observer = new IntersectionObserver((entries) => {
 reveals.forEach(el => observer.observe(el));
 
 // ===== Nav Dots =====
-const sections = ['hero', 'about', 'what-idid', 'deep-dive', 'tips', 'footer'];
+const sections = ['hero', 'about', 'what-idid', 'tips', 'footer'];
 const dots = document.querySelectorAll('.nav-dot');
 dots.forEach(dot => {
   dot.addEventListener('click', () => {
