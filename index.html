@@ -209,6 +209,13 @@
   .card-row-item .label-problem { color: #b5384d; }
   .card-row-item .label-solution { color: #2d6b4a; }
 
+  .level-label { margin-bottom: .5rem; }
+  .level-badge {
+    display: inline-block; padding: .4rem 1rem; border-radius: 20px;
+    font-size: .88rem; font-weight: 700; margin-bottom: .5rem;
+  }
+  .level-desc { font-size: .9rem; color: #666; margin-top: .3rem; padding-left: .2rem; }
+
   .highlight-bar {
     background: linear-gradient(90deg, #b06070, #b87d5c, #b09040);
     border-radius: 14px; padding: 1.2rem 1.5rem;
@@ -527,62 +534,79 @@
   <div class="container">
     <div class="section-tag tag-yellow reveal">💼 Part 1 <span class="part-badge p1">5min</span></div>
     <h2 class="section-title reveal delay-1">我用 AI 做了哪些事？</h2>
-    <p class="section-desc reveal delay-2">三个真实场景，看看 AI 怎么帮我省下时间 ⏰</p>
+    <p class="section-desc reveal delay-2">从省时间到创造价值，AI 能做的事情分三个层次 👇</p>
 
-    <div class="cards-grid">
-      <!-- Card 1 -->
+    <!-- 层次一 -->
+    <div class="level-label reveal" style="margin-top:2.5rem;">
+      <span class="level-badge" style="background:#e8f0fb;color:#3a6bc7;">⚡ 第一层：简单机械性工作 — 省时间</span>
+      <p class="level-desc">那些让你烦的体力活，是 AI 最该上场的地方</p>
+    </div>
+    <div class="cards-grid" style="margin-top:1rem;">
       <div class="card reveal delay-2">
-        <div class="card-icon" style="background: linear-gradient(135deg, #e0f0ff, #b8d8f8);">📊</div>
-        <h3>内容风向看板</h3>
-        <div class="card-tool">note-board-generator</div>
-        <div class="card-row">
-          <div class="card-row-item problem">
-            <span class="label label-problem">起因 😩</span><br>
-            商家老问"现在什么方向好"，我每次都靠感觉答，感觉不靠谱还说不清楚。
-          </div>
-          <div class="card-row-item solution">
-            <span class="label label-solution">解法 ✨</span><br>
-            让 AI 每周自动从 BI 拉数据、分析哪些内容方向在跑量，生成可以直接发给商家的看板页面。
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="card reveal delay-3">
         <div class="card-icon" style="background: linear-gradient(135deg, #fff3d0, #ffe5a0);">📅</div>
         <h3>AM 周报生成器</h3>
         <div class="card-tool">weekly-report-generator</div>
         <div class="card-row">
           <div class="card-row-item problem">
-            <span class="label label-problem">起因 😩</span><br>
+            <span class="label label-problem">痛点 😩</span><br>
             写周报要拉 8 个数据源、算环比、套模板，稍不注意数字就贴错，纯体力活，一搞就半小时。
           </div>
           <div class="card-row-item solution">
-            <span class="label label-solution">解法 ✨</span><br>
-            告诉 AI"帮我生成大门这周的周报"，2 分钟给我一个 Redoc 链接，打开就是填好的。
+            <span class="label label-solution">现在 ✨</span><br>
+            说一句"帮我生成大门这周的周报"，2 分钟给我一个 Redoc 链接，打开就是填好的。
           </div>
         </div>
       </div>
-
-      <!-- Card 3 -->
-      <div class="card reveal delay-4">
+      <div class="card reveal delay-3">
         <div class="card-icon" style="background: linear-gradient(135deg, #d4f5e9, #a8e6cf);">🎯</div>
         <h3>月度目标拆解</h3>
         <div class="card-tool">xushi-target-breakdown</div>
         <div class="card-row">
           <div class="card-row-item problem">
-            <span class="label label-problem">起因 😩</span><br>
-            月初要把总 GMV 目标拆到 K 播/店播/商笔/商卡，还要对上每个 AM 的锁定值，手算很容易出错，改一个数全要重算。
+            <span class="label label-problem">痛点 😩</span><br>
+            月初把总 GMV 拆到 K 播/店播/商笔/商卡，还要对上每个 AM 的锁定值，手算容易出错，改一个数全要重算。
           </div>
           <div class="card-row-item solution">
-            <span class="label label-solution">解法 ✨</span><br>
-            丢给 AI，它帮我算，还能反复调参数，改条件不用重头来。
+            <span class="label label-solution">现在 ✨</span><br>
+            丢给 AI，它帮我算，反复调参数、改条件也不用重头来。
           </div>
         </div>
       </div>
     </div>
 
-    <div class="highlight-bar reveal">
+    <!-- 层次二 -->
+    <div class="level-label reveal" style="margin-top:3rem;">
+      <span class="level-badge" style="background:#fdf0f5;color:#b5384d;">🚀 第二层：能创造价值的工作 — 让你说话有底气</span>
+      <p class="level-desc">不只是省时间，而是做出了以前做不到的事</p>
+    </div>
+    <div class="cards-grid" style="margin-top:1rem;">
+      <div class="card reveal delay-2" style="border-top: 3px solid #b5384d;">
+        <div class="card-icon" style="background: linear-gradient(135deg, #e0f0ff, #b8d8f8);">📊</div>
+        <h3>内容风向看板</h3>
+        <div class="card-tool">note-board-generator</div>
+        <div class="card-row">
+          <div class="card-row-item problem">
+            <span class="label label-problem">痛点 😩</span><br>
+            商家问"现在什么方向好"，以前靠感觉拍脑袋，说不清也没依据。
+          </div>
+          <div class="card-row-item solution">
+            <span class="label label-solution">现在 ✨</span><br>
+            每周 AI 自动从 BI 拉数据、分析跑量方向，生成一个看板直接发给商家——不再靠感觉，靠数据说话。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 层次三 -->
+    <div class="level-label reveal" style="margin-top:3rem;">
+      <span class="level-badge" style="background:#f0faf5;color:#2d6b4a;">🌱 第三层：可以让大家复用的 Skill — 从个人到组织</span>
+      <p class="level-desc">发布在内网 ClawHub，其他 AM 装了就能直接用</p>
+    </div>
+    <div class="highlight-bar reveal" style="margin-top:1rem;">
+      🧩 以上 3 个工具都是我发布在 ClawHub 上的 Skill，不只是自己用——组内同学安装之后同样可以跑
+    </div>
+
+    <div class="highlight-bar reveal" style="margin-top:1.2rem;background:linear-gradient(90deg,#4e8a6e,#6a9e7e,#b09040);">
       💡 AI 帮我把精力从「怎么做」移到「做什么」
     </div>
   </div>
